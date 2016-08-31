@@ -2,6 +2,7 @@
 from .cfg import SettingsLoadStrategyCfg
 from .json_file import SettingsLoadStrategyJson
 from .python import SettingsLoadStrategyPython
+from .conf import SettingsLoadStrategyConf
 
 yaml_strategy = None
 try:
@@ -13,6 +14,7 @@ except ImportError:  # pragma: no cover
 
 strategies = (
     SettingsLoadStrategyPython,
+    SettingsLoadStrategyConf,
     SettingsLoadStrategyCfg,
     SettingsLoadStrategyJson
 )
