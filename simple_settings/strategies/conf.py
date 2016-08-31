@@ -36,11 +36,10 @@ class SettingsLoadStrategyCfg(object):
         config.read(constants.CONFIG_SETTINGS)
         d = dict(config._sections)
         for section, outer_dict in d.items():
-
-        for inner_key, inner_item in outer_dict.items():
-            value_to_set = try_types(config, section, inner_key)
-            key_to_set = "%s_%s" % (section.upper(), inner_key.upper())
-            result[key_to_set] = value_to_set
+            for inner_key, inner_item in outer_dict.items():
+                value_to_set = try_types(config, section, inner_key)
+                key_to_set = "%s_%s" % (section.upper(), inner_key.upper())
+                result[key_to_set] = value_to_set
         return result
 
 
