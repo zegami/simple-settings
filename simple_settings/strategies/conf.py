@@ -33,7 +33,7 @@ class SettingsLoadStrategyConf(object):
     def load_settings_file(cls, settings_file):
         result = {}
         config = ConfigParser()
-        config.read(constants.CONFIG_SETTINGS)
+        config.read(settings_file)
         d = dict(config._sections)
         for section, outer_dict in d.items():
             for inner_key, inner_item in outer_dict.items():
