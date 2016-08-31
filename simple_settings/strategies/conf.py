@@ -12,7 +12,7 @@ def try_types(config, section, inner_key):
 
 
 
-class SettingsLoadStrategyCfg(object):
+class SettingsLoadStrategyConf(object):
     """
     This is the strategy used to read settings from conf files or ini files
     Note that the section name and item anme are capatilsed and concatenated
